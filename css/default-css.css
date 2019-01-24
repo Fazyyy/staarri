@@ -1,4 +1,4 @@
-/* 
+/*
 --------------------------
 - 1.1 Default CSS
 --------------------------
@@ -123,4 +123,165 @@ button,
 input,
 textarea {
     letter-spacing: 1px;
+}
+
+body {
+  background-color: #f3f5eb;
+}
+
+.stream {
+  display: none;
+}
+
+form {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 20px;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+}
+
+.remove-link {
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+  position: absolute;
+  top: 1px;
+  right: 16px;
+  transition: background-color 0.2s ease-in-out;
+  z-index: 200;
+}
+.remove-link span {
+  color: #EC4401;
+  transition: color 0.2s ease-in-out;
+}
+.remove-link:hover, .remove-link:focus {
+  background-color: rgba(8, 8, 8, 0.2);
+}
+.remove-link:hover span, .remove-link:focus span {
+  color: #a52f00;
+}
+
+.well {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+.well:hover .overlay, .well:focus .overlay {
+  opacity: 1;
+}
+.well .overlay {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.well .row {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .well .row {
+    display: block;
+    width: auto;
+  }
+}
+.well div[class^="col-"] {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+@media (max-width: 767px) {
+  .well div[class^="col-"] {
+    float: left;
+    display: block;
+    text-align: center;
+  }
+}
+.well img {
+  max-height: 100px;
+  border-radius: 50%;
+}
+.well h2 {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 160%;
+  margin-top: 0;
+  padding-bottom: 5px;
+  border-bottom: 5px solid black;
+}
+.well h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 120%;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.well h3 span {
+  display: block;
+  font-size: 80%;
+  margin-bottom: 5px;
+}
+.well p {
+  margin-bottom: 0;
+}
+.well p span {
+  font-size: 80%;
+}
+.well.online {
+  background-color: rgba(19, 205, 74, 0.2);
+  color: #5E525C;
+}
+.well.online h2 {
+  border-bottom: 5px solid #13CD4A;
+}
+.well.online:focus .overlay, .well.online:hover .overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.well.offline {
+  color: #999999;
+}
+.well.offline h2 {
+  border-bottom: 5px solid #999999;
+}
+.well.offline img {
+  opacity: 0.5;
+}
+.well.offline .overlay {
+  background-color: rgba(8, 8, 8, 0.9);
+  opacity: 0.6;
+}
+.well.offline:focus .overlay, .well.offline:hover .overlay {
+  opacity: 0;
+}
+.well.no-account {
+  color: #EC4401;
+  background-color: #CCC;
+}
+.well.no-account h2 {
+  border-bottom: 5px solid #EC4401;
+}
+.well.no-account img {
+  opacity: 0.5;
+}
+.well.no-account .overlay {
+  background-color: rgba(120, 8, 8, 0.9);
+  opacity: 0.6;
+}
+.well.no-account:focus .overlay, .well.no-account:hover .overlay {
+  opacity: 0.3;
 }
